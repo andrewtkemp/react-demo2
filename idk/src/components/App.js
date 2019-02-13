@@ -3,7 +3,6 @@ import { HashRouter, Link, Route } from "react-router-dom";
 import { connect } from "react-redux"
 import CommentBox from "components/CommentBox";
 import CommentList from "components/CommentList";
-import protectedRoute from "components/protectedRoute.";
 import * as actions from "actions";
 class App extends Component {
     renderButton = () => {
@@ -32,7 +31,7 @@ class App extends Component {
             <HashRouter>
                 <div>
                     {this.renderHeader()}
-                    <Route path="/post" component={protectedRoute(CommentBox)} />
+                    <Route path="/post" component={CommentBox} />
                     <Route exact path="/" component={CommentList} />
                 </div>
             </HashRouter>
