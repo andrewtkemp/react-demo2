@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import moxios from "moxios";
 import * as actions from "actions";
 class CommentBox extends Component {
     state = {
@@ -35,5 +34,4 @@ class CommentBox extends Component {
         )
     }
 }
-
 export default connect(null, actions)(CommentBox);
